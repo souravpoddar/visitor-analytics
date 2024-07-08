@@ -2,7 +2,8 @@ package main
 
 import (
 	"net/http"
-	"visitor-analytics/internal/analytics"
+
+	"github.com/souravpoddar/visitor-analytics/internal/analytics"
 
 	"github.com/gorilla/mux"
 )

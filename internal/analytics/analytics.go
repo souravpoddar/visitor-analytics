@@ -14,13 +14,13 @@ type AnalyticsService struct {
 	VisitorStore VisitorStore
 }
 type VisitorStore struct {
-	store map[string]map[string]bool
+	Store map[string]map[string]bool
 	mu    sync.Mutex
 }
 
 func NewVisitorStore() *VisitorStore {
 	return &VisitorStore{
-		store: make(map[string]map[string]bool),
+		Store: make(map[string]map[string]bool),
 	}
 }
 
@@ -38,10 +38,10 @@ func (v *VisitorStore) RecordVisitor(url, visitorID string) {
 	v.mu.Lock()
 	defer v.mu.Unlock()
 
-	if _, ok := v.store[url]; !ok {
-		v.store[url] = make(map[string]bool)
+	if _, ok := v.Store[url]; !ok {
+		v.Store[url] = make(map[string]bool)
 	}
-	v.store[url][visitorID] = true
+	v.Store[url][visitorID] = true
 }
 
 func (v *VisitorStore) trackVisitor(w http.ResponseWriter, r *http.Request) {
@@ -71,8 +71,8 @@ func (v *VisitorStore) GetUniqueVisitors() map[string]int {
 	v.mu.Lock()
 	defer v.mu.Unlock()
 	returnMap := make(map[string]int)
-	for k := range v.store {
-		returnMap[k] = len(v.store[k])
+	for k := range v.Store {
+		returnMap[k] = len(v.Store[k])
 	}
 
 	return returnMap

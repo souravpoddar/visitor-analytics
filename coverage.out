@@ -1,0 +1,16 @@
+mode: set
+github.com/souravpoddar/visitor-analytics/internal/analytics/analytics.go:21.38,25.2 1 1
+github.com/souravpoddar/visitor-analytics/internal/analytics/analytics.go:27.46,31.2 1 0
+github.com/souravpoddar/visitor-analytics/internal/analytics/analytics.go:33.64,36.2 2 0
+github.com/souravpoddar/visitor-analytics/internal/analytics/analytics.go:37.61,41.32 3 1
+github.com/souravpoddar/visitor-analytics/internal/analytics/analytics.go:44.2,44.32 1 1
+github.com/souravpoddar/visitor-analytics/internal/analytics/analytics.go:41.32,43.3 1 1
+github.com/souravpoddar/visitor-analytics/internal/analytics/analytics.go:47.77,51.34 3 0
+github.com/souravpoddar/visitor-analytics/internal/analytics/analytics.go:56.2,56.33 1 0
+github.com/souravpoddar/visitor-analytics/internal/analytics/analytics.go:51.34,54.3 2 0
+github.com/souravpoddar/visitor-analytics/internal/analytics/analytics.go:59.77,62.37 2 0
+github.com/souravpoddar/visitor-analytics/internal/analytics/analytics.go:62.37,64.43 2 0
+github.com/souravpoddar/visitor-analytics/internal/analytics/analytics.go:64.43,66.4 1 0
+github.com/souravpoddar/visitor-analytics/internal/analytics/analytics.go:70.59,74.25 4 1
+github.com/souravpoddar/visitor-analytics/internal/analytics/analytics.go:78.2,78.18 1 1
+github.com/souravpoddar/visitor-analytics/internal/analytics/analytics.go:74.25,76.3 1 1
