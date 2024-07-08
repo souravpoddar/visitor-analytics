@@ -1,4 +1,4 @@
-module visitor-analytics
+module github.com/souravpoddar/visitor-analytics
 
 go 1.19
 
