@@ -2,22 +2,24 @@
 FROM golang:1.19-alpine
 
 # Work directory
-WORKDIR $GOPATH/src/github.com/souravpoddar/visitor-analytics
+WORKDIR /app
+
+# Copying all the files
+COPY . ./
 
 # Installing dependencies
 COPY go.mod go.sum ./
 RUN go mod download
 
-# Copying all the files
-COPY . .
 # Download all the dependencies
 RUN go get -d -v ./...
 
 # Install the package
 RUN go install -v ./...
 
-# Starting our application
-CMD ["visitor-analytics"]
-
+RUN go build -o visitor-analytics ./cmd
 # Exposing server port
 EXPOSE 8080
+# Starting our application
+CMD ["./visitor-analytics"]
+
